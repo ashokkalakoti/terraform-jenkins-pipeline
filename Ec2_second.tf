@@ -1,6 +1,6 @@
 resource "aws_instance" "cicd_infra_test" {
   ami                   = "ami-0ae3e6717dc99c62b"
-  instance_type         = "m5.xlarge"
+  instance_type         = "t3.large"
   subnet_id             = "subnet-097ce800c64d29b91"
  vpc_security_group_ids        = [ "sg-06f13c8befd2f75e5" ]
  iam_instance_profile   = "SSMROLEFOREC2"
