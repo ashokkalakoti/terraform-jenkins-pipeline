@@ -61,7 +61,7 @@ module "cc-example_repo" {
   sqs-id = "${aws_sqs_queue.main.id}"
   topic-prefix = "${var.sns-topic-prefix}"
   topic-suffix = "${var.sns-topic-suffix}"
-  email-sns-arn = "arn:aws:sns:ap-southeast-1:864610509831:Default_CloudWatch_Alarms_Topic"
+  email-sns-arn = "arn:aws:sns:ap-southeast-1:${data.aws_caller_identity.current.account_id}:Default_CloudWatch_Alarms_Topic"
 
 }
 
